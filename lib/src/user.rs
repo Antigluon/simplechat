@@ -50,7 +50,8 @@ pub fn format_username(username: &str) -> String {
 /// # use std::collections::HashSet;
 /// let mut existing_names = HashSet::new();
 /// existing_names.insert("alice".to_string());
-/// validate_username(&existing_names, "bob".to_string()).unwrap();
+/// let new_user_name = validate_username(&existing_names, "bob".to_string()).unwrap();
+/// existing_names.insert(new_user_name);
 /// validate_username(&existing_names, "bob".to_string()).unwrap_err();
 /// validate_username(&existing_names, "alice".to_string()).unwrap_err();
 /// validate_username(&existing_names, "a".to_string()).unwrap_err();
