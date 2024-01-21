@@ -1,0 +1,17 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lib = { path = "../lib" }
+anyhow = "1.0.77"
+axum = { version = "0.7.3", features = ["ws"] }
+futures = "0.3.30"
+tokio = { version = "1.35.1", features = ["rt-multi-thread"] }
+tokio-stream = { version = "0.1.14", features = ["sync"] }
+sender-sink = "0.2.1"
+tracing-subscriber = { version = "0.3.18", features = ["std", "env-filter"] }
+tracing = "0.1.40"
